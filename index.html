@@ -6,30 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Nombre de la pestaña-->
     <title>Control de Invernadero</title>
+    <!--Referencia al diseño de la pagina-->
+    <link rel="stylesheet" href="estilos/estilos.css">
     <!-- Importamos los scripts de Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
 </head>
 
 <body>
-    <!--Titulo-->
-    <h1>Control de Invernadero</h1>
-    <!--Encabezados de los estados de los actuadores-->
-    <h2>Estado del LED:</h2>
-    <!--Se mostrara este mensaje hasta que reciba respuesta de Firebase-->
-    <p id="estadoLed">Cargando...</p>
-    <!--Encabezados de los sensores-->
-    <h2>Valor del Potenciómetro:</h2>
-    <!--Se mostrara este mensaje hasta que reciba respuesta de Firebase-->
-    <p id="valorPotenciometro">Cargando...</p>
-    <!--Encabezados de las variables a alterar-->
-    <h2>Modificar Variable de sensor:</h2>
-    <!--Accion de boton que manda a llamar la función de JS que envía el valor a Firebase-->
-    <input type="number" id="nuevoValorSP" placeholder="Nuevo valor">
-    <button onclick="actualizarVariableSP()">Actualizar</button>
+    <!--Inicio del codigo del contenedor de nuestra pagina principal-->
+    <div class="contenedor">
+        <!--Contendedor de nuestra barra de navegación-->
+        <div class="barra">
+            <div class="logo">
+                <h1>Proyecto</h1>
+            </div>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="#">Consulta de datos</a>
+            </nav>
 
-    
+        </div>
+        <div class = "caja">
+            <!--Titulo-->
+            <h1>Control de Invernadero</h1>
+            <!--Encabezados de los estados de los actuadores-->
+            <h2>Estado del LED:</h2>
+            <!--Se mostrara este mensaje hasta que reciba respuesta de Firebase-->
+            <p id="estadoLed">Cargando...</p>
+            <!--Encabezados de los sensores-->
+            <h2>Valor del Potenciómetro:</h2>
+            <!--Se mostrara este mensaje hasta que reciba respuesta de Firebase-->
+            <p id="valorPotenciometro">Cargando...</p>
+            <!--Encabezados de las variables a alterar-->
+            <h2>Modificar Variable de sensor: <p id = "valorVariable">Cargando...</p></h2>
+            <!--Accion de boton que manda a llamar la función de JS que envía el valor a Firebase-->
+            <input type="number" id="nuevoValorSP" placeholder="Nuevo valor">
+            <button onclick="actualizarVariableSP()">Actualizar</button>
+
+        </div>
+
+
+    </div>
+
 </body>
 <!--Referencia nuestro codigo de JavaScript-->
 <script src="JS/app.js"></script>
+
 </html>

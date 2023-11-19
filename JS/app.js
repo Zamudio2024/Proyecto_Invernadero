@@ -39,6 +39,11 @@ function initializeFirebase() {
         const nuevoValorSP = document.getElementById('nuevoValorSP').value;
         variableSPRef.set(parseInt(nuevoValorSP, 10));
     };
+    variableSPRef.on('value', (snapshot) => {
+        const valorVariable = snapshot.val();
+        document.getElementById('valorVariable').innerText = `Valor de la Variable: ${valorVariable}`;
+    });
+    
 }
 
 // Scripts de Firebase
