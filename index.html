@@ -23,7 +23,7 @@
             </div>
             <nav class="menu">
                 <a href="index.html">Inicio</a>
-                <a href="#">Consulta de datos</a>
+                <a href="consulta.html">Consulta de datos</a>
             </nav>
 
         </div>
@@ -31,13 +31,20 @@
             <!--Titulo-->
             <h1>Control de Invernadero</h1>
             <!--Encabezados de los estados de los actuadores-->
-            <h2>Estado del LED:</h2>
+            <h2>Estado de la bomba:</h2>
             <!--Se mostrara este mensaje hasta que reciba respuesta de Firebase-->
-            <p id="estadoLed">Cargando...</p>
+            <p id="estadoBomba">Cargando...</p>
+            <h2>Estado del foco:</h2>
+            <!--Se mostrara este mensaje hasta que reciba respuesta de Firebase-->
+            <p id="estadoFoco">Cargando...</p>
             <!--Encabezados de los sensores-->
-            <h2>Valor del Potenciómetro:</h2>
+            <h2>Porcentaje de humedad:</h2>
             <!--Se mostrara este mensaje hasta que reciba respuesta de Firebase-->
-            <p id="valorPotenciometro">Cargando...</p>
+            <p id="valorHumedad">Cargando...</p>
+            <!--Encabezados de los sensores-->
+            <h2>Porcentaje de luz:</h2>
+            <!--Se mostrara este mensaje hasta que reciba respuesta de Firebase-->
+            <p id="valorLuz">Cargando...</p>
             <!--Encabezados de las variables a alterar-->
             <h2>Modificar Variable de sensor: <p id = "valorVariable">Cargando...</p></h2>
             <!--Accion de boton que manda a llamar la función de JS que envía el valor a Firebase-->

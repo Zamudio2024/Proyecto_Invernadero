@@ -18,20 +18,33 @@ function initializeFirebase() {
     const database = firebase.database();
 
     // Referencias a los nodos específicos en la base de datos
-    const ledRef = database.ref('Invernadero/Actuador/Led');
-    const potenciometroRef = database.ref('Invernadero/Sensores/Potenciometro');
+    const bmbRef = database.ref('Invernadero/Actuador/Bomba');
+    const focoRef = database.ref('Invernadero/Actuador/Luz')
+    const humedadRef = database.ref('Invernadero/Sensores/Humedad');
+    const luzRef = database.ref('Invernadero/Sensores/Luz');
     const variableSPRef = database.ref('Invernadero/Variable/sP');
 
-    // Escucha cambios en el estado del LED y actualiza la interfaz de usuario
-    ledRef.on('value', (snapshot) => {
-        const estadoLed = snapshot.val();
-        document.getElementById('estadoLed').innerText = `Estado del LED: ${estadoLed}`;
+    // Escucha cambios en el estado de la bomba y actualiza la interfaz de usuario
+    bmbRef.on('value', (snapshot) => {
+        const estadoBomba = snapshot.val();
+        document.getElementById('estadoBomba').innerText = `Estado de la bomba: ${estadoBomba}`;
     });
 
-    // Escucha cambios en el valor del potenciómetro y actualiza la interfaz de usuario
-    potenciometroRef.on('value', (snapshot) => {
-        const valorPotenciometro = snapshot.val();
-        document.getElementById('valorPotenciometro').innerText = `Valor del Potenciómetro: ${valorPotenciometro}`;
+    // Escucha cambios en el estado del foco y actualiza la interfaz de usuario
+    focoRef.on('value', (snapshot) => {
+        const estadoFoco = snapshot.val();
+        document.getElementById('estadoFoco').innerText = `Estado del foco: ${estadoFoco}`;
+    });
+
+    // Escucha cambios en el valor del sensor de Humedad y actualiza la interfaz de usuario
+    humedadRef.on('value', (snapshot) => {
+        const valorHumedad = snapshot.val();
+        document.getElementById('valorHumedad').innerText = `Porcentaje de humedad: ${valorHumedad} %`;
+    });
+    // Escucha cambios en el valor del sensor de luz y actualiza la interfaz de usuario
+    luzRef.on('value', (snapshot) => {
+        const valorLuz = snapshot.val();
+        document.getElementById('valorLuz').innerText = `Porcentaje de luz: ${valorLuz} %`;
     });
 
     // Actualiza la variable sP en la base de datos según el nuevo valor ingresado en la interfaz
@@ -39,6 +52,7 @@ function initializeFirebase() {
         const nuevoValorSP = document.getElementById('nuevoValorSP').value;
         variableSPRef.set(parseInt(nuevoValorSP, 10));
     };
+    // Escucha los cambios echos en las variables y los muestra en la interfaz
     variableSPRef.on('value', (snapshot) => {
         const valorVariable = snapshot.val();
         document.getElementById('valorVariable').innerText = `Valor de la Variable: ${valorVariable}`;
@@ -55,7 +69,6 @@ firebaseScript.onload = () => {
     // Carga el script de Firebase Database y, una vez cargado, ejecuta la inicialización de Firebase
     databaseScript.src = 'https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js';
     databaseScript.onload = initializeFirebase;
-    // Agrega el script de Firebase Database al encabezado del documento
     document.head.appendChild(databaseScript);
 };
 // Agrega el script de Firebase App al encabezado del documento
