@@ -31,22 +31,18 @@
         <div class = "caja">
             <!--Titulo-->
             <h1>Control de Invernadero</h1>
-            <!--Encabezados de los estados de los actuadores-->
-            <h2>Estado de la bomba:</h2>
-            <!--Se mostrara este mensaje hasta que reciba respuesta de Firebase-->
-            <p id="estadoBomba">Cargando...</p>
-            <h2>Estado del foco:</h2>
-            <!--Se mostrara este mensaje hasta que reciba respuesta de Firebase-->
-            <p id="estadoFoco">Cargando...</p>
-            <!--Encabezados de los sensores-->
-            <h2>Porcentaje de humedad:</h2>
-            <!--Se mostrara este mensaje hasta que reciba respuesta de Firebase-->
-            <p id="valorHumedad">Cargando...</p>
-            <!--Encabezados de los sensores-->
-            <h2>Porcentaje de luz:</h2>
-            <!--Se mostrara este mensaje hasta que reciba respuesta de Firebase-->
-            <p id="valorLuz">Cargando...</p>
+            
+            <!--Encabezados de las variables a alterar-->
+            <h2>Modificar Variable de sensor: <p id = "valorVariableLuz">Cargando...</p></h2>
+            <!--Accion de boton que manda a llamar la función de JS que envía el valor a Firebase-->
+            <input type="number" id="nuevoValorSp" placeholder="Nuevo valor">
+            <button onclick="actualizarVariableSp()">Actualizar</button>
 
+            <!--Encabezados de las variables a alterar-->
+            <h2>Modificar Variable de sensor: <p id = "valorVariableBomba">Cargando...</p></h2>
+            <!--Accion de boton que manda a llamar la función de JS que envía el valor a Firebase-->
+            <input type="number" id="nuevoValorBmb" placeholder="Nuevo valor">
+            <button onclick="actualizarVariableBmb()">Actualizar</button>
 
         </div>
 
@@ -55,6 +51,6 @@
 
 </body>
 <!--Referencia nuestro codigo de JavaScript-->
-<script src="JS/app.js"></script>
+<script src="JS/app2.js"></script>
 
 </html>
