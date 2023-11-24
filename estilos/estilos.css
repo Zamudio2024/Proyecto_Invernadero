@@ -120,14 +120,14 @@ button {
 }
 
 .table-container {
-    max-height: 540px; /* Ajusta la altura máxima según tus necesidades */
+    max-height: 550px; /* Ajusta la altura máxima según tus necesidades */
     overflow-y: auto;
 }
 
 #tablaDatos {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 5px;
     background-color: #fff;
 }
 
@@ -143,4 +143,96 @@ button {
     color: #fff;
 }
 
+/* Estilos para DataTables */
+.dataTables_wrapper {
+    margin-top: 0px;
+    background-color: #333;
+    padding-bottom: 20px;
+    border: 2px solid #000000;
+    
+}
 
+/* Estilos para la paginación de DataTables */
+.dataTables_paginate {
+    text-align: center;
+    margin-top: 15px;
+    
+}
+
+.dataTables_paginate a {
+    background-color: white;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.dataTables_paginate a.paginate_button.current {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+    
+}
+
+.dataTables_paginate a:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para el buscador de DataTables */
+.dataTables_filter {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.dataTables_filter label {
+    margin-right: 10px;
+}
+
+.dataTables_filter input {
+    padding: 0px;
+    border: 2px solid #6e6e6e;
+}
+
+/* Estilos para el pie de tabla de DataTables */
+.dataTables_info {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+/* Estilos para el desplegable "Show entries" de DataTables */
+.dataTables_length {
+    margin-top: 10px;
+    margin-left: 5px;
+    display: inline-block; /* Hace que el desplegable no ocupe toda la línea */
+    background-color: rgb(194, 194, 194);
+    border: 1px solid #ddd;
+}
+
+.dataTables_length label {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.dataTables_length select {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000000; 
+    font-size: 15px;
+    font-weight: 700;
+}

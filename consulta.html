@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Datos - Invernadero</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+
+</head>
+
+<body>
+    <!-- Contenedor de la página -->
+    <div class="contenedor">
+        <!-- Barra de navegación -->
+        <div class="barra">
+            <div class="logo">
+                <h1>Proyecto</h1>
+            </div>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="variables.html">Variables</a>
+                <a href="consulta.html">Consulta de datos</a>
+            </nav>
+        </div>
+        <div class="caja">
+            <!-- Título de la página -->
+            <h1>Consulta de Datos</h1>
+            <!-- Tabla para mostrar los datos -->
+            <div class="table-container">
+                <table id="tablaDatos">
+                    <thead>
+                        <tr>
+                            <th>Fecha y Hora</th>
+                            <th>Estado de la bomba</th>
+                            <th>Estado del foco</th>
+                            <th>Porcentaje de humedad</th>
+                            <th>Porcentaje de luz</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí se cargarán los datos automáticamente mediante JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="JS/app3.js"></script>
+</body>
+
+</html>
